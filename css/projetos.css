@@ -1,0 +1,292 @@
+/* Apresentação */
+
+#apresentacao {
+    padding: var(--espaco-8) var(--espaco-6);
+
+    background-color: var(--creme);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+#apresentacao h1 {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#apresentacao p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ferramentas de atuação */
+
+#ferramentas {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    gap: var(--espaco-5);
+    padding: var(--espaco-7) 0;
+}
+
+#ferramentas > h2,
+#ferramentas > p {
+    grid-column: 1 / -1;
+}
+
+#ferramentas > h2 {
+    margin-bottom: 0;
+}
+
+#ferramentas > p {
+    margin: 0 0 var(--espaco-4);
+}
+
+#ferramentas article {
+    grid-column: span 4;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    min-width: 0;
+
+    background-color: var(--creme);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#ferramentas article:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 6px 15px rgba(47, 42, 36, 0.12);
+}
+
+#ferramentas article picture,
+#ferramentas article img {
+    display: block;
+    width: 100%;
+}
+
+#ferramentas article img {
+    height: 220px;
+    object-fit: cover;
+}
+
+#ferramentas article h3 {
+    margin-top: var(--espaco-3);
+}
+
+#ferramentas article ul {
+    padding-left: var(--espaco-5);
+}
+
+#ferramentas article li {
+    margin-bottom: var(--espaco-2);
+}
+
+#ferramentas article li:last-child {
+    margin-bottom: 0;
+}
+
+/* Conteúdo dos projetos */
+
+#ferramentas .projeto-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    flex: 1;
+
+    padding: var(--espaco-5);
+}
+
+#ferramentas .projeto-conteudo p {
+    margin: var(--espaco-3) 0;
+}
+
+/* Área de voluntariado */
+
+#seja-voluntario {
+    padding: var(--espaco-7);
+
+    background-color: var(--creme);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+}
+
+#seja-voluntario p {
+    max-width: 800px;
+}
+
+#seja-voluntario ol,
+#seja-voluntario ul {
+    max-width: 800px;
+
+    padding-left: var(--espaco-6);
+
+    color: var(--cinza-texto);
+}
+
+#seja-voluntario li {
+    margin-bottom: var(--espaco-2);
+}
+
+#seja-voluntario li:last-child {
+    margin-bottom: 0;
+}
+
+/* Doação */
+
+#faca-doacao {
+    padding: var(--espaco-7);
+
+    background-color: var(--verde-floresta);
+    border-radius: 12px;
+}
+
+#faca-doacao h2,
+#faca-doacao h3,
+#faca-doacao p,
+#faca-doacao li {
+    color: var(--creme);
+}
+
+#faca-doacao p {
+    max-width: 900px;
+}
+
+#faca-doacao ul {
+    max-width: 800px;
+    padding-left: var(--espaco-6);
+}
+
+#faca-doacao li {
+    margin-bottom: var(--espaco-2);
+}
+
+#faca-doacao li:last-child {
+    margin-bottom: 0;
+}
+
+/* Feedback dos projetos */
+
+.feedback-projetos {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    gap: var(--espaco-4);
+    padding: var(--espaco-5) 0;
+}
+
+.feedback-projetos h2 {
+    grid-column: 1 / -1;
+
+    margin-bottom: var(--espaco-5);
+
+    text-align: center;
+}
+
+.feedback-projetos .alerta {
+    grid-column: span 6;
+}
+
+/* Responsividade */
+
+@media (max-width: 1200px) {
+
+    #apresentacao {
+        padding: var(--espaco-7) var(--espaco-5);
+    }
+
+    #seja-voluntario,
+    #faca-doacao {
+        padding: var(--espaco-6);
+    }
+}
+
+@media (max-width: 992px) {
+
+    #ferramentas article {
+        grid-column: span 6;
+    }
+
+    #ferramentas article:last-of-type {
+        grid-column: 4 / span 6;
+    }
+
+    .feedback-projetos .alerta {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #apresentacao {
+        padding: var(--espaco-6) var(--espaco-5);
+    }
+
+    #ferramentas {
+        padding: var(--espaco-6) 0;
+    }
+
+    #ferramentas article,
+    #ferramentas article:last-of-type {
+        grid-column: 1 / -1;
+    }
+
+    #ferramentas article img {
+        height: 210px;
+    }
+
+    #seja-voluntario,
+    #faca-doacao {
+        padding: var(--espaco-5);
+    }
+
+    .feedback-projetos {
+        padding: var(--espaco-5) 0;
+    }
+
+    .feedback-projetos .alerta {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 576px) {
+
+    #ferramentas article img {
+        height: 190px;
+    }
+
+    #ferramentas {
+        gap: var(--espaco-4);
+    }
+
+    #seja-voluntario,
+    #faca-doacao {
+        padding: var(--espaco-5);
+    }
+}
+
+@media (max-width: 400px) {
+
+    #ferramentas article img {
+        height: 170px;
+    }
+
+    #seja-voluntario,
+    #faca-doacao {
+        padding: var(--espaco-4);
+    }
+}

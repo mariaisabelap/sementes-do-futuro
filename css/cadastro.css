@@ -1,0 +1,225 @@
+/* Cadastro */
+
+#cadastro {
+    padding: var(--espaco-7);
+
+    background-color: var(--creme);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+}
+
+#cadastro > p {
+    max-width: 800px;
+}
+
+/* Formulário */
+
+#cadastro form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--espaco-5);
+}
+
+/* Fieldsets */
+
+#cadastro fieldset {
+    grid-column: 1 / -1;
+
+    min-width: 0;
+    margin: 0;
+    padding: var(--espaco-5);
+
+    background-color: var(--bege-fundo);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+}
+
+#cadastro legend {
+    padding: 0 var(--espaco-2);
+
+    color: var(--verde-floresta);
+    font-weight: bold;
+}
+
+#cadastro label {
+    display: block;
+
+    margin-bottom: var(--espaco-2);
+
+    color: var(--marrom-texto);
+    font-weight: 600;
+}
+
+/* Campos */
+
+#cadastro input,
+#cadastro select,
+#cadastro textarea {
+    width: 100%;
+
+    padding: var(--espaco-3);
+
+    background-color: var(--creme);
+    color: var(--marrom-texto);
+
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+
+    font-family: inherit;
+    font-size: var(--fonte-base);
+}
+
+#cadastro input:hover,
+#cadastro select:hover,
+#cadastro textarea:hover {
+    border-color: var(--verde-folha);
+}
+
+#cadastro input:focus,
+#cadastro select:focus,
+#cadastro textarea:focus {
+    border-color: var(--verde-floresta);
+}
+
+#cadastro textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Espaçamento entre os campos */
+
+#cadastro fieldset > label:first-of-type {
+    margin-top: 0;
+}
+
+#cadastro fieldset > label {
+    margin-top: var(--espaco-4);
+}
+
+#cadastro fieldset p {
+    margin-bottom: var(--espaco-3);
+}
+
+/* Opções de rádio */
+
+.opcoes-radio {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: var(--espaco-4);
+}
+
+.opcoes-radio label {
+    display: flex;
+    align-items: center;
+
+    gap: var(--espaco-2);
+    margin: 0;
+
+    font-weight: 400;
+}
+
+input[type="radio"] {
+    width: auto;
+    accent-color: var(--verde-floresta);
+}
+
+/* Botão de envio */
+
+#cadastro button[type="submit"] {
+    grid-column: 1 / -1;
+
+    padding: var(--espaco-3) var(--espaco-5);
+
+    background-color: var(--ocre);
+    color: var(--creme);
+
+    border: 2px solid var(--ocre);
+    border-radius: 6px;
+
+    font: inherit;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+#cadastro button[type="submit"]:hover {
+    background-color: var(--marrom-terra);
+    border-color: var(--marrom-terra);
+}
+
+#cadastro button[type="submit"]:focus-visible {
+    outline: 3px solid var(--ocre);
+    outline-offset: 3px;
+}
+
+#cadastro button[type="submit"]:active {
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+/* Mensagem do formulário */
+
+#mensagem-formulario {
+    grid-column: 1 / -1;
+
+    margin: 0;
+    padding: var(--espaco-4);
+
+    background-color: #E1EDE2;
+    color: var(--verde-floresta);
+
+    border-left: 5px solid var(--verde-floresta);
+    border-radius: 8px;
+
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+
+    #cadastro {
+        padding: var(--espaco-5);
+    }
+
+    #cadastro form {
+        gap: var(--espaco-4);
+    }
+
+    #cadastro fieldset {
+        padding: var(--espaco-4);
+    }
+
+    .opcoes-radio {
+        flex-direction: column;
+        gap: var(--espaco-3);
+    }
+}
+
+@media (max-width: 576px) {
+
+    #cadastro {
+        padding: var(--espaco-4);
+    }
+
+    #cadastro fieldset {
+        padding: var(--espaco-3);
+    }
+}
+
+@media (max-width: 400px) {
+
+    #cadastro {
+        padding: var(--espaco-3);
+    }
+
+    #cadastro fieldset {
+        padding: var(--espaco-3);
+    }
+}

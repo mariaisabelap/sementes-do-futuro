@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/projetos.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
+
+    <title>Sementes do Futuro</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <picture>
+
+            <source
+                srcset="../img/banner_ong.webp"
+                type="image/webp"
+            >
+
+            <img
+                src="../img/banner_ong.jpeg"
+                alt="Banner da ONG Sementes do Futuro"
+            >
+
+        </picture>
+
+
+        <nav aria-label="Navegação principal">
+
+            <!-- Menu mobile -->
+
+            <details class="menu-mobile">
+
+                <summary>☰ Menu</summary>
+
+                <ul class="menu-mobile-list">
+
+                    <li>
+
+                        <a
+                            href="#inicio"
+                            data-rota="inicio"
+                        >
+                            Início
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <details>
+
+                            <summary>A ONG</summary>
+
+                            <ul>
+
+                                <li>
+
+                                    <a
+                                        href="#nossa-historia"
+                                        data-rota="inicio"
+                                    >
+                                        Nossa História
+                                    </a>
+
+                                </li>
+
+                                <li>
+
+                                    <a
+                                        href="#nosso-impacto"
+                                        data-rota="inicio"
+                                    >
+                                        Nosso impacto
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </details>
+
+                    </li>
+
+
+                    <li>
+
+                        <details>
+
+                            <summary>Projetos</summary>
+
+                            <ul>
+
+                                <li>
+
+                                    <a
+                                        href="#nossos-projetos"
+                                        data-rota="inicio"
+                                    >
+                                        Nossos projetos
+                                    </a>
+
+                                </li>
+
+                                <li>
+
+                                    <a
+                                        href="#faca-parte"
+                                        data-rota="inicio"
+                                    >
+                                        Faça parte
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </details>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="#cadastro"
+                            data-rota="cadastro"
+                        >
+                            Quero participar
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </details>
+
+
+            <!-- Menu desktop -->
+
+            <ul class="menu-desktop">
+
+                <li>
+
+                    <a
+                        href="#inicio"
+                        data-rota="inicio"
+                    >
+                        Início
+                    </a>
+
+                </li>
+
+
+                <li class="menu-item">
+
+                    <details>
+
+                        <summary>A ONG ▾</summary>
+
+                        <ul class="submenu">
+
+                            <li>
+
+                                <a
+                                    href="#nossa-historia"
+                                    data-rota="inicio"
+                                >
+                                    Nossa História
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <a
+                                    href="#nosso-impacto"
+                                    data-rota="inicio"
+                                >
+                                    Nosso impacto
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </details>
+
+                </li>
+
+
+                <li class="menu-item">
+
+                    <details>
+
+                        <summary>Projetos ▾</summary>
+
+                        <ul class="submenu">
+
+                            <li>
+
+                                <a
+                                    href="#nossos-projetos"
+                                    data-rota="inicio"
+                                >
+                                    Nossos projetos
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <a
+                                    href="#faca-parte"
+                                    data-rota="inicio"
+                                >
+                                    Faça parte
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </details>
+
+                </li>
+
+
+                <li>
+
+                    <a
+                        href="#cadastro"
+                        data-rota="cadastro"
+                    >
+                        Quero participar
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main id="app">
+    </main>
+
+
+    <!-- Modais -->
+
+    <div
+        id="modal-raizes"
+        class="modal"
+        popover
+    >
+
+        <div class="modal-conteudo">
+
+            <span class="badge badge-verde">
+                Projeto ativo
+            </span>
+
+            <h2>Raízes do Amanhã</h2>
+
+            <p>
+                O projeto promove o plantio de árvores e a recuperação
+                de áreas verdes, aproximando a comunidade das práticas
+                de preservação ambiental.
+            </p>
+
+            <button
+                class="botao-principal"
+                type="button"
+                popovertarget="modal-raizes"
+                popovertargetaction="hide"
+            >
+                Fechar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="modal-ciclo"
+        class="modal"
+        popover
+    >
+
+        <div class="modal-conteudo">
+
+            <span class="badge badge-ocre">
+                Conscientização
+            </span>
+
+            <h2>Ciclo Consciente</h2>
+
+            <p>
+                O projeto promove ações de reciclagem e conscientização
+                para incentivar o descarte correto de resíduos e reduzir
+                os impactos ambientais.
+            </p>
+
+            <button
+                class="botao-principal"
+                type="button"
+                popovertarget="modal-ciclo"
+                popovertargetaction="hide"
+            >
+                Fechar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="modal-agua"
+        class="modal"
+        popover
+    >
+
+        <div class="modal-conteudo">
+
+            <span class="badge badge-azul">
+                Preservação
+            </span>
+
+            <h2>Guardiões da Água</h2>
+
+            <p>
+                A iniciativa busca preservar rios e nascentes e incentivar
+                o uso responsável da água por meio de ações comunitárias
+                e educação ambiental.
+            </p>
+
+            <button
+                class="botao-principal"
+                type="button"
+                popovertarget="modal-agua"
+                popovertargetaction="hide"
+            >
+                Fechar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <h2>Entre em contato</h2>
+
+        <p>
+            E-mail:
+
+            <a href="mailto:contato@sementesdofuturo.org">
+                contato@sementesdofuturo.org
+            </a>
+
+        </p>
+
+
+        <p>
+            Telefone:
+
+            <a href="tel:+5583999999999">
+                (83) 99999-9999
+            </a>
+
+        </p>
+
+
+        <p>João Pessoa - PB</p>
+
+
+        <p>
+
+            &copy; 2026 Sementes do Futuro.
+            Todos os direitos reservados.
+
+        </p>
+
+    </footer>
+
+    <script type="module" src="../js/app.js"></script>
+
+</body>
+
+</html>
+
