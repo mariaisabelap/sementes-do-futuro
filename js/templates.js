@@ -675,6 +675,7 @@ export function mostrarCadastro() {
                         name="nome"
                         id="nome"
                         autocomplete="name"
+                        aria-describedby="erro-nome"
                         required
                     >
 
@@ -689,6 +690,7 @@ export function mostrarCadastro() {
                         type="date"
                         name="nascimento"
                         id="nascimento"
+                        aria-describedby="erro-nascimento"
                         required
                     >
 
@@ -708,6 +710,7 @@ export function mostrarCadastro() {
                         placeholder="000.000.000-00"
                         title="Digite o CPF no formato 000.000.000-00"
                         maxlength="14"
+                        aria-describedby="erro-cpf"
                         required
                     >
 
@@ -729,6 +732,7 @@ export function mostrarCadastro() {
                         name="email"
                         id="email"
                         autocomplete="email"
+                        aria-describedby="erro-email"
                         required
                     >
 
@@ -749,6 +753,7 @@ export function mostrarCadastro() {
                         title="Digite apenas os números do telefone"
                         maxlength="11"
                         autocomplete="tel"
+                        aria-describedby="erro-telefone"
                         required
                     >
 
@@ -775,6 +780,7 @@ export function mostrarCadastro() {
                         title="Digite o CEP no formato 00000-000"
                         maxlength="9"
                         autocomplete="postal-code"
+                        aria-describedby="erro-cep"
                         required
                     >
 
@@ -790,6 +796,7 @@ export function mostrarCadastro() {
                         name="endereco"
                         id="endereco"
                         autocomplete="street-address"
+                        aria-describedby="erro-endereco"
                         required
                     >
 
@@ -804,6 +811,7 @@ export function mostrarCadastro() {
                         type="text"
                         name="numero"
                         id="numero"
+                        aria-describedby="erro-numero"
                         required
                     >
 
@@ -831,6 +839,7 @@ export function mostrarCadastro() {
                         name="cidade"
                         id="cidade"
                         autocomplete="address-level2"
+                        aria-describedby="erro-cidade"
                         required
                     >
 
@@ -845,6 +854,7 @@ export function mostrarCadastro() {
                         name="estado"
                         id="estado"
                         autocomplete="address-level1"
+                        aria-describedby="erro-estado"
                         required
                     >
                         <option value="">
@@ -887,6 +897,7 @@ export function mostrarCadastro() {
                     <select
                         name="area"
                         id="area"
+                        aria-describedby="erro-area"
                         required
                     >
 
@@ -915,53 +926,59 @@ export function mostrarCadastro() {
                     <small class="mensagem-erro" id="erro-area"></small>
 
 
-                    <p>Disponibilidade:</p>
+                    <fieldset class="grupo-disponibilidade">
+
+                        <legend>Disponibilidade:</legend>
+
+                        <div class="opcoes-radio">
+
+                            <label>
+
+                                <input
+                                    type="radio"
+                                    name="disponibilidade"
+                                    value="semana"
+                                    required
+                                >
+
+                                Durante a semana
+
+                            </label>
 
 
-                    <div class="opcoes-radio">
+                            <label>
 
-                        <label>
+                                <input
+                                    type="radio"
+                                    name="disponibilidade"
+                                    value="fim-semana"
+                                >
 
-                            <input
-                                type="radio"
-                                name="disponibilidade"
-                                value="semana"
-                                required
-                            >
+                                Finais de semana
 
-                            Durante a semana
-
-                        </label>
+                            </label>
 
 
-                        <label>
+                            <label>
 
-                            <input
-                                type="radio"
-                                name="disponibilidade"
-                                value="fim-semana"
-                            >
+                                <input
+                                    type="radio"
+                                    name="disponibilidade"
+                                    value="ambos"
+                                >
 
-                            Finais de semana
+                                Ambos
 
-                        </label>
+                            </label>
 
+                        </div>
 
-                        <label>
+                        <small
+                            class="mensagem-erro"
+                            id="erro-disponibilidade"
+                        ></small>
 
-                            <input
-                                type="radio"
-                                name="disponibilidade"
-                                value="ambos"
-                            >
-
-                            Ambos
-
-                        </label>
-
-                    </div>
-
-                    <small class="mensagem-erro" id="erro-disponibilidade"></small>
+                    </fieldset>
 
 
                     <label for="motivacao">
@@ -974,10 +991,14 @@ export function mostrarCadastro() {
                         name="motivacao"
                         rows="5"
                         maxlength="300"
+                        aria-describedby="erro-motivacao contador-motivacao"
                         required
                     ></textarea>
 
-                    <small class="mensagem-erro" id="erro-motivacao"></small>
+                    <small
+                        class="mensagem-erro"
+                        id="erro-motivacao"
+                    ></small>
 
                     <small id="contador-motivacao">
                         0/300 caracteres
@@ -988,7 +1009,11 @@ export function mostrarCadastro() {
                         Enviar cadastro
                     </button>
 
-                    <div id="mensagem-formulario" role="status"></div>
+                    <div
+                        id="mensagem-formulario"
+                        role="status"
+                        aria-live="polite"
+                    ></div>
 
                 </fieldset>
 
